@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chi tiết Blog</title>
+  <link rel="stylesheet" href="../CSS/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Questrial:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../node_modules/jquery.emojiarea.js/docs/assets/css/reset.css">
+  <link rel="stylesheet" href="../../node_modules/jquery.emojiarea.js/docs/assets/css/style.css">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="../../node_modules/jquery.emojiarea.js/docs/assets/js/jquery.emojiarea.js"></script>
+  <script src="../../node_modules/jquery.emojiarea.js/docs/assets/js/main.js"></script>
+  <link rel="stylesheet"
+    href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+</head>
+
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header>
+      <div class="logo">
+        <div class="logo__name">
+          <p>Dang Thu Huyen</p>
+        </div>
+      </div>
+      <div class="categories">
+        <div class="categories__menu">
+          <ul class="menu">
+            <li><a href="homepage.html" onclick="toggleMenu();">Trang chủ</a></li>
+            <li class="item_02">
+              <a href="./blog.html">Blog</a>
+              <span><i class="fas fa-chevron-down"></i></span>
+              <ul class="sub_menu" id="category-post">
+              </ul>
+            </li>
+            <li class="item_02">
+              <a href="podcast.html" onclick="toggleMenu();">Podcast</a>
+              <span><i class="fas fa-chevron-down"></i></span>
+              <ul class="sub_menu" id="category-podcast">
+              </ul>
+            </li>
+            <li class="item_02">
+              <a href="" onclick="toggleMenu();">Thư viện</a>
+              <span><i class="fas fa-chevron-down"></i></span>
+              <ul class="sub_menu">
+                <li><a href="">Group cộng đồng</a></li>
+                <li><a href="">Đăng ký thành viên</a></li>
+                <li><a href="">Thư viện cộng đồng</a></li>
+                <li><a href="">Liên hệ</a></li>
+              </ul>
+            </li>
+            <li><a href="homepage.html#books" onclick="toggleMenu();">Sách</a></li>
+            <li class="item_05"><a href="courses.html" onclick="toggleMenu();">Khóa học</a></li>
+          </ul>
+        </div>
+        <div class="contact__icon">
+          <i class="fab fa-facebook-f"></i>
+          <i class="fab fa-instagram"></i>
+          <i class="fab fa-youtube"></i>
+        </div>
+        <div class="categories__notification">
+          <div>
+            <i class="fas fa-bell dropdown-toggle" data-toggle="notificationMenu"></i>
+            <span class="firstspan">40</span>
+          </div>
+          <!-- <ul id="notificationMenu" class="dropdown-menu notification-menu">
+            <div class="dropdown-menu-header">
+              <span>Thông báo</span>
+            </div>
+            <div class="dropdown-menu-content overlay-scrollbar">
+              <li class="dropdown-menu-item">
+                <a href="#" class="dropdown-menu-link">
+                  <div>
+                    <img src="../../IMG/dangthuhuyen_blog.jpg" alt="">
+                  </div>
+                  <span>
+                    Hãy cập nhật và chia sẻ những kiến thức mới cùng tôi
+                    <br>
+                    <span>
+                      2 giờ trước
+                    </span>
+                  </span>
+                </a>
+              </li>
+              <li class="dropdown-menu-item">
+                <a href="#" class="dropdown-menu-link">
+                  <div>
+                    <img src="../../IMG/dangthuhuyen_blog.jpg" alt="">
+                  </div>
+                  <span>
+                    Hãy cập nhật và chia sẻ những kiến thức mới cùng tôi
+                    <br>
+                    <span>
+                      4 giờ trước
+                    </span>
+                  </span>
+                </a>
+              </li>
+            </div>
+            <div class="dropdown-menu-footer">
+              <span>Tất cả thông báo</span>
+            </div>
+          </ul>-->
+         <img style="display: none;" src="" class="user-img" alt="Tài khoản" title="Tài khoản" id="profile"> 
+          <div class="logout" id="logout">
+            <ul>
+              <li id="name-profile"></li>
+              <li><a href="">Profile</a></li>
+              <li><a href="">My L&D Center</a></li>
+              <li><a href="">My Account</a></li>
+              <li class="line-logout"></li>
+              <li><a id="logouthome" href="homepage.html">Đăng xuất</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="categories__login" id="nonelogin">
+          <div class="login__icon">
+            <i class="fas fa-user"></i>
+          </div>
+          <a href="login.html">
+            <button>Login</button>
+          </a>
+        </div>
+        <div class="toggle" onclick="toggleMenu()"></div>
+      </div>
+    </header>
+
+    <!-- Share post -->
+    <div class="share__postdt">
+      <div class="share__contentdt">
+        <div class="flex">
+          <div class="share__titledt">Chia sẻ bài đăng</div>
+          <div class="share__icondt">
+            <img src="../../IMG/facebook-logo.png" alt="">
+            <img src="../../IMG/twitter-logo.png" alt="">
+            <img src="../../IMG/instagram-logo.png" alt="">
+            <img src="../../IMG/link-logo.png" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="close__sharedt">
+        <img src="../../IMG/close.png" alt="" onclick="closeShare()">
+      </div>
+    </div>
+
+    <!-- Tablist -->
+    <div class="tablistdt">
+      <div class="item__listdt">
+        <ul>
+          <li><a href="blog.html">All Posts</a></li>
+          <li><a href="blog_title.html">Ký năng tương lai</a></li>
+          <li><a href="blog_title.html">Phát triển bản thân</a></li>
+          <li style="font-weight: 600;">
+            Khác
+            <i class="fas fa-chevron-down" style="font-size: 12px;"></i>
+            <ul>
+              <li><a href="blog_title.html">Cuộc sống & hạnh phúc</a></li>
+              <li><a href="blog_title.html">Thơ & tản văn</a></li>
+              <li><a href="blog_title.html">Travel</a></li>
+              <li><a href="blog_title.html">Phỏng vấn & báo chí</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="item__custom">
+        <div class="search__item">
+          <i class="fas fa-search search"></i>
+          <input class="inputSearch" type="text" placeholder="Search...">
+          <i class="fas fa-times close"></i>
+        </div>
+        <div class="loginout__item">
+          <a href="login.html">
+            <button>Đăng nhập / Đăng ký</button>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Blog -->
+    <div class="blog">
+      <div class="blog_items">
+        <div id="blog-item">
+        </div> 
+        <!-- Blog comment -->
+        <div class="blog__comment">
+          <div class="info" style="position: relative; top: 10px;">
+            <div class="info__ava">
+              <img src="../../IMG/logo_vn.png" alt="">
+            </div>
+          </div>
+          <div class="comment__text">
+            <div class="comment_btn">
+              <button type="button" id="comment" style="display: none;">Viết bình luận...</button>
+              <div class="input_commnent">
+                <div data-emojiarea="" data-type="unicode" data-global-picker="false">
+                  <div class="emoji-button" style="display: flex;">😄</div> 
+                  <textarea id="comment-input" type="text" placeholder="Viết bình luận..." style="display: block;"></textarea>
+                </div>
+              </div>
+            </div>
+            <div class="commnet_event" style="display: flex;">
+              <div class="event">
+                <div class="btn_camera">
+                  <input type="file" id="camera">
+                </div>
+                <div class="btn_gif">
+                  <input type="file" id="gif">
+                </div>
+                <div class="btn_emoji">
+                  <!-- <div data-emojiarea data-type="unicode" data-global-picker="false">
+                    <div class="emoji-button">&#x1f604;</div>
+                  </div> -->
+                </div>
+              </div>
+              <div class="btn_cm">
+                <button class="close_comment" type="button">Hủy</button>
+                <button class="post_comment" onclick="clickcomment()"  type="submit">Đăng</button>
+              </div>
+            </div>
+          </div>
+        </div>
+          <!--comment -->
+        <div id="commentblog">
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Title bài viết mới đăng -->
+    <div class="blogCurent_Title">
+      <div class="title_current">
+        Bài đăng gần đây
+      </div>
+      <div class="view__all">
+        <a href="blog.html">Xem tất cả</a>
+      </div>
+    </div>
+
+    <!-- Hiển thị các bài post mới đăng gần đây -->
+    <div class="postdt__item">
+      <div class="itemdt__post">
+        <div class="item__img">
+          <img
+            src="https://static.wixstatic.com/media/e60689a35872427a8d22f9e341dd1d34.jpg/v1/fill/w_292,h_219,fp_0.50_0.50,q_90/e60689a35872427a8d22f9e341dd1d34.webp"
+            alt="">
+        </div>
+        <div class="item__title">
+          <h3>COVID & NIỀM TIN CÁ NHÂN CÁ NHÂN</h3>
+        </div>
+        <div style="border-bottom: 1px solid#ccc; width: 250px; margin: auto;"></div>
+        <div class="item__icon">
+          <i class="far fa-eye"> 999</i>
+          <i class="far fa-heart"> 99</i>
+        </div>
+      </div>
+      <div class="itemdt__post">
+        <div class="item__img">
+          <img
+            src="https://static.wixstatic.com/media/e60689a35872427a8d22f9e341dd1d34.jpg/v1/fill/w_292,h_219,fp_0.50_0.50,q_90/e60689a35872427a8d22f9e341dd1d34.webp"
+            alt="">
+        </div>
+        <div class="item__title">
+          <h3>COVID & NIỀM TIN CÁ NHÂN CÁ NHÂN</h3>
+        </div>
+        <div style="border-bottom: 1px solid#ccc; width: 250px; margin: auto;"></div>
+        <div class="item__icon">
+          <i class="far fa-eye"> 999</i>
+          <i class="far fa-heart"> 99</i>
+        </div>
+      </div>
+      <div class="itemdt__post">
+        <div class="item__img">
+          <img
+            src="https://static.wixstatic.com/media/e60689a35872427a8d22f9e341dd1d34.jpg/v1/fill/w_292,h_219,fp_0.50_0.50,q_90/e60689a35872427a8d22f9e341dd1d34.webp"
+            alt="">
+        </div>
+        <div class="item__title">
+          <h3>COVID & NIỀM TIN CÁ NHÂN CÁ NHÂN</h3>
+        </div>
+        <div style="border-bottom: 1px solid#ccc; width: 250px; margin: auto;"></div>
+        <div class="item__icon">
+          <i class="far fa-eye"> 999</i>
+          <i class="far fa-heart"> 99</i>
+        </div>
+      </div>
+      
+    </div>
+
+    <!-- Spotify Podcast -->
+    <div class="blog__podcast">
+      <iframe src="https://open.spotify.com/embed/episode/68AwQVcBJLITxpyRyzHO0H?theme=0" width="100%" height="232"
+        frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <div class="footer__content">
+        <div class="contact__ft">
+          <h3>Hãy nhập vào email để phản hồi</h3>
+          <input type="text" placeholder="example@gmail.com">
+          <div>
+            <button>Subcribe</button>
+          </div>
+        </div>
+      </div>
+      <div class="copyright__footer">
+        <p>@CopyRight 2021 by - DANG THU HUYEN</p>
+      </div>
+    </div>
+
+     <!-- ChatBot -->
+     <div class="chatbot">
+      <div class="btn_chatbot" onclick="openChatBot()">
+        <i class="lar la-comment"></i>
+        <span>Tin nhắn online</span>
+      </div>
+    </div>
+    <div class="chat_mess">
+      <div class="mess_admin">
+        <div>
+          <div class="nameadmin">
+            <p>Đặng Thu Huyền</p>
+          </div>
+          <div class="status">
+            <i class="fas fa-circle"></i>
+            <span>Trực tuyến</span>
+          </div>
+        </div>
+        <div class="close_chat" onclick="closeChatBot()">
+          <i class="las la-times"></i>
+        </div>
+      </div>
+      <div class="messeages">
+          <ul>
+            <li>hello cacban</li>
+            <li>hello cacban</li>
+            <li>hello cacban</li>
+            <li>hello cacban</li>
+            <li>hello cacban</li>
+            <li>hello cacban</li>
+            <li>hello cacban</li>
+            <li>hello cacban</li>
+            <li>hello cacban</li>
+            <li>hello cacban</li>
+            <li>hello cacban</li>
+            <li>hello cacban</li>
+            <li>hello cacban</li>
+            <li>hello cacban</li>
+            <li>hello cacban</li>
+            <li>hello cacban</li>
+            <li>hello cacban</li>
+            <li>hello cacban</li>
+          </ul>
+      </div>
+      <div class="input_mess">
+        <div class="messText">
+         <textarea name="" id="messsubmit" placeholder="Nhập vào tin nhắn của bạn"></textarea>
+        </div>
+        <div class="messEmoji">
+          <i class="las la-paperclip"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="../JS/blog_detail.js"></script>
+<script src="../../API/url_home.js"></script>
+<script src="../../API/posts.js"></script>
+<script src="../../API/comment.js"></script>
+<script src="../../API/category.js"></script>
+<script src="../../API/checkrank.js"></script>
+<script>
+
+</script>
+</html>
